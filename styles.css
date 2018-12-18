@@ -1,0 +1,45 @@
+/*Colors to use
+
+#f9f7f7
+#dbe2ef
+#3f72af
+#112d4e
+*/
+
+
+body {
+background-color:#f9f7f7;
+text-align: center;
+
+}
+
+.top-container{
+background-color: #3f72af;
+padding: 80px;
+
+
+}
+
+.middle-container{
+  padding: 50px;
+}
+
+.vs-container{
+  margin: auto;
+}
+
+.imagerps{
+
+  border-radius: 100%;
+  width: 40%;
+
+}
+
+.button-container{
+  padding: 30px 20px;
+}
+
+.footer-container{
+  padding: 10px;
+
+}
