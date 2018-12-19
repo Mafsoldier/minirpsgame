@@ -127,8 +127,18 @@ function setNameDraw(){
 
 //set's score
 function setScore(){
-document.getElementById("humanScoreDisplay").innerHTML = "Computer score: " + humanScore;
+document.getElementById("humanScoreDisplay").innerHTML = "Your score: " + humanScore;
 document.getElementById("computerScoreDisplay").innerHTML = "Computer score: " + computerScore;
+
+}
+
+function resetScore(){
+  humanScore = 0;
+  computerScore = 0;
+  document.getElementById("humanScoreDisplay").innerHTML = "Your score: " + humanScore;
+  document.getElementById("computerScoreDisplay").innerHTML = "Computer score: " + computerScore;
+  document.getElementById("playerName").innerHTML = "You!" ;
+  document.getElementById("ComputerName").innerHTML = "The computer";
 
 }
 
