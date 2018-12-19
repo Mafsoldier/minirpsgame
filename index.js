@@ -59,7 +59,7 @@ return i;
 }
 
 
-// wie wint er?
+// wie wint er? en score zetter
 var humanScore = 0;
 var computerScore = 0;
 var humanChoiseNumber = 0;
@@ -72,15 +72,16 @@ var pcPlayerChoiseNumber=0;
 function score(humanChoiseNumber, pcPlayerChoiseNumber) {
 
   if (humanChoiseNumber === pcPlayerChoiseNumber) {
-      alert("Draw!");
+      setNameDraw();
+
   }
 
   else if (humanChoiseNumber == 1) {
     if (pcPlayerChoiseNumber == 2) {
-      alert("Computer wins!");
+      setNameWinComputer();
       computerScore++;
     }if (pcPlayerChoiseNumber ==3){
-      alert("Human wins!");
+      setNameWinHuman();
       humanScore++;
 
     }
@@ -88,10 +89,10 @@ function score(humanChoiseNumber, pcPlayerChoiseNumber) {
 
   else if (humanChoiseNumber == 2) {
     if (pcPlayerChoiseNumber == 1) {
-      alert("Human wins!");
+      setNameWinHuman();
       humanScore++;
     }if (pcPlayerChoiseNumber == 3) {
-      alert("Computer wins!");
+      setNameWinComputer();
       computerScore++;
   }
 }
@@ -100,13 +101,34 @@ function score(humanChoiseNumber, pcPlayerChoiseNumber) {
 
 else if (humanChoiseNumber == 3) {
     if (pcPlayerChoiseNumber == 1) {
-      alert("computer wins!");
+      setNameWinComputer();
       computerScore++;
     }if (pcPlayerChoiseNumber == 2) {
-      alert("Human wins!");
+      setNameWinHuman();
       humanScore++;
   }
   }
+}
+
+function setNameWinComputer(){
+  document.getElementById("playerName").innerHTML = "You!" ;
+  document.getElementById("ComputerName").innerHTML = "🏁 The computer";
+
+}
+function setNameWinHuman(){
+  document.getElementById("playerName").innerHTML = "🏁 You!" ;
+  document.getElementById("ComputerName").innerHTML = "The computer";
+}
+function setNameDraw(){
+  document.getElementById("playerName").innerHTML = "😎 You!" ;
+  document.getElementById("ComputerName").innerHTML = "😎 The computer";
+}
+
+
+//set's score
+function setScore(){
+document.getElementById("humanScoreDisplay").innerHTML = "Computer score: " + humanScore;
+document.getElementById("computerScoreDisplay").innerHTML = "Computer score: " + computerScore;
 
 }
 
@@ -114,5 +136,6 @@ else if (humanChoiseNumber == 3) {
 
   function playGame(i) {
   score(humanChoise(i), pcSpeler());
+  setScore();
 
 }
